@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: #0f172a;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* MAIN LAYOUT */
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* BOTH PANELS */
+
+main .left,
+main .right {
+  flex: 1;
+  height: calc(100vh - 2rem);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* LEFT PANEL */
+
+main .left {
+  background-color: #1e293b;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TEXTAREA */
+
+main .left textarea {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 85vh; /* Increased editor height */
+  resize: none;
+  border: none;
+  outline: none;
+  background-color: #111827;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  line-height: 1.5;
+  overflow-y: auto;
+}
+
+/* BUTTON */
+
+main .left button {
+  margin-top: auto; /* Push button to bottom */
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+main .left button:hover {
+  background-color: #2563eb;
+}
+
+/* RIGHT PANEL */
+
+main .right {
+  background-color: #1e293b;
+  padding: 1rem;
+  color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* CODE BLOCKS */
+
+main .right pre {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  background-color: #111827;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  white-space: pre-wrap;
+}
+
+main .right code {
+  font-family: "Fira Code", monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 10px;
+}
